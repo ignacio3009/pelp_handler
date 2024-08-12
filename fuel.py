@@ -10,6 +10,9 @@ class Fuel:
         self.consider_availability = consider_availability
         self.fuel_price = fuel_price
         self.fuel_type = fuel_type
+        self.unit = ''
+        self.mmbtu_per_unit = 0.0
+        self.co2_emissions = 0.0
         self.data = {}
 
     def __str__(self):
@@ -41,6 +44,15 @@ class Fuel:
 
     def get_fuel_type(self):
         return self.fuel_type
+    
+    def get_unit(self):
+        return self.unit
+    def get_mmbtu_per_unit(self):
+        return self.mmbtu_per_unit
+
+    def get_co2_emissions(self):
+        return self.co2_emissions
+    
 
     def set_id(self, id):
         self.id = id
